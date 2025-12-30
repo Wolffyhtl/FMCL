@@ -1,87 +1,112 @@
 #include <bits/stdc++.h>
 #include <windows.h>
 using namespace std;
-string username,menu_option,login_method;
+string username, menu_option, login_method;
+void menu()
+{
+	printf("èœå•\n"
+		"å¯åŠ¨æ¸¸æˆï¼šä»ä½ çš„ç”µè„‘ä¸­å¯åŠ¨Minecraft\n"
+		"è”æœºæ¸¸æˆï¼šå¤šäººç‰ˆMinecraftæ¸¸æˆ(å»PCLå¯åŠ¨å™¨å»)\n"
+		"ä¸‹è½½æ¸¸æˆï¼šä¸‹è½½æ¸¸æˆæ–‡ä»¶åå®‰è£…(ç‰ˆæœ¬è‡ªè¡Œé€‰æ‹©)\n"
+		"ç®¡ç†æ¸¸æˆï¼šåˆ é™¤æ¸¸æˆï¼Œè°ƒæ•´æ¸¸æˆå†…å­˜...\n"
+		"å¯åŠ¨å™¨è®¾ç½®ï¼šè®¾ç½®å¯åŠ¨å™¨\n"
+		"æ¨¡ç»„ä¸‹è½½ï¼šä¸‹è½½MOD\n"
+		"é€€å‡ºï¼šé€€å‡ºå¯åŠ¨å™¨\n"
+		"ç‰ˆæœ¬ï¼šå±•ç¤ºç‰ˆæœ¬å·\n"
+		"æ›´æ–°ï¼šè·å–æœ€æ–°ç‰ˆæœ¬æ›´æ–°\n"
+		"å¦‚å¯åŠ¨å™¨å¡ä½ï¼Œè¾“å…¥reloadå³å¯\n"
+		"ä¿®å¤ï¼šä¿®å¤Java\n"
+		"clsï¼šæ¸…ç©ºå±å¹•ä¸Šçš„æ–‡å­—\n"
+		"æ¸…ç†ï¼šæ¸…ç†ä¸´æ—¶æ–‡ä»¶\n"
+		"æºä»£ç ï¼šå±•ç¤ºç¨‹åºæºä»£ç \n\n\n");
+}
 int main()
 {
-    SetConsoleCP(936);
-    SetConsoleOutputCP(936);
-    cout<<"C++  Minecraft Lancher 1.0"<<"\n";
-    cout<<"ÇëÊäÈëÄãµÄÃû×Ö"<<"\n";
-    cin>>username;
-    cout<<"RAM:4194304KB OK"<<"\n";
-    cout<<"file is loading..."<<"\n";
-    cout<<"µÈ´ıÊı¾İ¿âÏìÓ¦"<<"\n";
-    cout<<"3ÃëºóÄãµÄµçÄÔ»á´ò¿ªÒ»¸öä¯ÀÀÆ÷´°¿Ú£¬Ö±½Ó¹Ø±Õ¼´¿É£¬"<<"\n";
-    Sleep(3000);
-    system("start https://launchermeta.mojang.com/mc/game/version_manifest.json");
-    system("cls");
-    printf("²Ëµ¥\n"
-           "Æô¶¯ÓÎÏ·£º´ÓÄãµÄµçÄÔÖĞÆô¶¯Minecraft\n"
-           "Áª»úÓÎÏ·£º¶àÈË°æMinecraftÓÎÏ·(È¥PCLÆô¶¯Æ÷È¥)\n"
-           "ÏÂÔØÓÎÏ·£ºÏÂÔØÓÎÏ·ÎÄ¼şºó°²×°(°æ±¾×ÔĞĞÑ¡Ôñ)\n"
-           "¹ÜÀíÓÎÏ·£ºÉ¾³ıÓÎÏ·£¬µ÷ÕûÓÎÏ·ÄÚ´æ...\n"
-           "Æô¶¯Æ÷ÉèÖÃ£ºÉèÖÃÆô¶¯Æ÷\n"
-           "Ä£×éÏÂÔØ£ºÏÂÔØMOD\n"
-           "ÍË³ö£ºÍË³öÆô¶¯Æ÷\n"
-           "°æ±¾£ºÕ¹Ê¾°æ±¾ºÅ\n"
-           "¸üĞÂ£º»ñÈ¡×îĞÂ°æ±¾¸üĞÂ\n"
-           "ÈçÆô¶¯Æ÷¿¨×¡£¬ÊäÈëreload¼´¿É\n"
-           "ĞŞ¸´£ºĞŞ¸´Java\n"
-           "cls£ºÇå¿ÕÆÁÄ»ÉÏµÄÎÄ×Ö\n"
-           "ÇåÀí£ºÇåÀíÁÙÊ±ÎÄ¼ş\n"
-           "Ô´´úÂë£ºÕ¹Ê¾³ÌĞòÔ´´úÂë\n\n");
-    while(1)
-    {
-        cout<<"ÇëÊäÈë£º";
-        cin>>menu_option;
-        if(menu_option == "ÍË³ö")
-            return 0;
-        else if(menu_option == "Æô¶¯ÓÎÏ·")
-        {
-            system("cls");
-            cout<<username<<",ÄúºÃ"<<"\n"<<"\n";
-            printf("ÇëÑ¡ÔñµÇÂ¼·½Ê½\n"
-                   "ÀëÏßµÇÂ¼\n"
-                   "Õı°æµÇÂ¼(ÓÃ¹ú¼Ê°æÈ¥)\n"
-                   "·şÎñÆ÷µÇÂ¼(ÖÆ×÷ÖĞ)\n");
-            cin>>login_method;
-            break;
-        }
-        else if(menu_option=="cls")
-        {
-            system("cls");
-            continue;
-        }
-        else if(menu_option=="Ô´´úÂë")
-        {
-            system("start https://github.com/Wolffyhtl/FMCL");
-            continue;
-        }
-        else if(menu_option=="°æ±¾")
-        {
-            cout<<"C++ Minecraft Lancher 1.0"<<"\n";
-            continue;
-        }
-        else
-        {
-            cout<<"Ã»ÓĞÏàÆ¥ÅäµÄÃüÁî£¬ÔÙÊÔÒ»´Î°É¡£"<<"\n";
-            cout<<":Ã»ÓĞÕÒµ½ÃüÁî¡£"<<"\n"<<"\n";
-            continue;
-        }
-    } 
-    if(login_method == "ÀëÏßµÇÂ¼")
-    {
-        system("cls");
-        cout<<"µ±Ç°Ä£Ê½£ºÀëÏßµÇÂ¼"<<"\n";
-        cout<<"ÄÚ´æ·ÖÅä£º4096MB"<<"\n";
-        cout<<"JavaÊÇ·ñ°²×°£ºÊÇ"<<"\n";
-        cout<<"µÈ´ıÆô¶¯...";
-        system("cls");
-        cout<<"ÕıÔÚ¼ÓÔØ µ±Ç°½ø¶È£º";
-        cout<<"ÅäÖÃJava"<<"\r";
-        cout<<"²éÕÒMinecraftÎÄ¼ş"<<"\r";
-        cout<<"µÈ´ıÓÎÏ·´°¿Ú³öÏÖ"<<"\n";
-    }
-    return 0;
+	SetConsoleCP(936);
+	SetConsoleOutputCP(936);
+	cout << "C++  Minecraft Lancher 1.0" << "\n";
+	cout << "è¯·è¾“å…¥ä½ çš„åå­—" << "\n";
+	cin >> username;
+	cout << "RAM:4194304KB OK" << "\n";
+	cout << "file is loading..." << "\n";
+	cout << "ç­‰å¾…æ•°æ®åº“å“åº”" << "\n";
+	cout << "3ç§’åä½ çš„ç”µè„‘ä¼šæ‰“å¼€ä¸€ä¸ªæµè§ˆå™¨çª—å£ï¼Œç›´æ¥å…³é—­å³å¯ï¼Œ" << "\n";
+	Sleep(3000);
+	system("start https://launchermeta.mojang.com/mc/game/version_manifest.json");
+	system("cls");
+	menu();
+	while (1)
+	{
+		cout << "è¯·è¾“å…¥ï¼š";
+		cin >> menu_option;
+		if (menu_option ==  "é€€å‡º")
+		return 0;
+		else if (menu_option ==  "å¯åŠ¨æ¸¸æˆ")
+		{
+			system("cls");
+			cout << username << ",æ‚¨å¥½" << "\n" << "\n";
+			printf("è¯·é€‰æ‹©ç™»å½•æ–¹å¼\n"
+			"ç¦»çº¿ç™»å½•\n"
+			"æ­£ç‰ˆç™»å½•(ç”¨å›½é™…ç‰ˆå»)\n"
+			"æœåŠ¡å™¨ç™»å½•(åˆ¶ä½œä¸­)\n");
+			cin >> login_method;
+			system("cls");
+			cout<<"æ­£åœ¨åŠ è½½ å½“å‰è¿›åº¦ï¼šé…ç½®Java"<<"\n";
+			Sleep(5000);
+			system("cls");
+			cout<<"æ­£åœ¨åŠ è½½ å½“å‰è¿›åº¦ï¼šæŸ¥æ‰¾Minecraftæ–‡ä»¶"<<"\n";
+			Sleep(5000);
+			system("cls");
+			cout<<"æ­£åœ¨åŠ è½½ å½“å‰è¿›åº¦ï¼šç­‰å¾…æ¸¸æˆçª—å£å‡ºç°"<<"\n"<<"\n";
+			cout<<"ä½ çŸ¥é“å—,è¿™ä¸ªå¯åŠ¨å™¨æ­¤å‰æ²¡æœ‰C++ç‰ˆæœ¬ã€‚"<<"\n";
+			Sleep(5000);
+			system("cls");
+			cout<<"æ­£åœ¨åŠ è½½ å½“å‰è¿›åº¦ï¼šç­‰å¾…æ¸¸æˆçª—å£å‡ºç°"<<"\n"<<"\n";
+			cout<<"ä½ çŸ¥é“å—,æ¸¸æˆå¯åŠ¨å¤±è´¥ä½ å¯ä»¥åœ¨å¯åŠ¨å™¨é‡Œè¾“å…¥ä¿®å¤Javaå³å¯ã€‚"<<"\n";
+			system("è¿›åº¦æ¡.bat");
+			return 0;
+		}
+		else if (menu_option == "cls")
+		{
+			system("cls");
+			continue;
+		}
+		else if (menu_option == "æºä»£ç ")
+		{
+			system("start https://github.com/Wolffyhtl/FMCL");
+			continue;
+		}
+		else if (menu_option == "ç‰ˆæœ¬")
+		{
+			cout << "Minecraft Lancher 0.3" << "\n";
+			cout<< "powered by ä¸€ä¸ªå°å°å°é¾™ copyright Dragon 2025-2030"<<"\n";
+			continue;
+		}
+		else if (menu_option == "å¸®åŠ©")
+			menu();
+		else if (menu_option == "æ›´æ–°")
+		{
+			cout<<"æ£€æŸ¥æ›´æ–°ä¸­..."<<"\n";
+			Sleep(2000);
+			cout<<"æ‚¨çš„ç‰ˆæœ¬æ˜¯æœ€æ–°çš„ï¼Œæ— éœ€æ›´æ–°ã€‚";
+		}
+		else if (menu_option == "ä¿®å¤")
+		{
+			cout<<"æ­£åœ¨ä¸‹è½½microsoft-jdk-21.0.9-windows-x64.msi"<<endl;	
+			cout<<"æ­£åœ¨éªŒè¯Hashå€¼"<<endl;
+			cout<<"æ­£åœ¨è¿è¡Œ"<<endl;
+			system("microsoft-jdk-2109-windows-x64.msi");
+		}
+		else if(menu_option == "æ¸…ç†"){
+			system("cleanTemp.bat");
+			continue;
+		}
+		else
+		{
+			cout << "æ²¡æœ‰ç›¸åŒ¹é…çš„å‘½ä»¤ï¼Œå†è¯•ä¸€æ¬¡å§ã€‚" << "\n";
+			cout << ":æ²¡æœ‰æ‰¾åˆ°å‘½ä»¤ã€‚" << "\n" << "\n";
+			continue;
+		}
+	}
+	return 0;
 }
