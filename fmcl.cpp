@@ -2,7 +2,8 @@
 #include <cstdio>
 #include <windows.h>
 using namespace std;
-string username, menu_option, login_method;
+string userName, menuOption, loginMethod, manageGame;
+int memorySet;
 void menu()
 {
 	printf("菜单\n"
@@ -27,7 +28,7 @@ int main()
 	SetConsoleOutputCP(936);
 	cout << "C++  Minecraft Lancher 1.0" << "\n";
 	cout << "请输入你的名字" << "\n";
-	cin >> username;
+	cin >> userName;
 	cout << "RAM:4194304KB OK" << "\n";
 	cout << "file is loading..." << "\n";
 	cout << "等待数据库响应" << "\n";
@@ -39,18 +40,18 @@ int main()
 	while (1)
 	{
 		cout << "请输入：";
-		cin >> menu_option;
-		if (menu_option ==  "退出")
+		cin >> menuOption;
+		if (menuOption ==  "退出")
 			return 0;
-		else if (menu_option ==  "启动游戏")
+		else if (menuOption ==  "启动游戏")
 		{
 			system("cls");
-			cout << username << ",您好" << "\n" << "\n";
+			cout << userName << ",您好" << "\n" << "\n";
 			printf("请选择登录方式\n"
 			       "离线登录\n"
 			       "正版登录(用国际版去)\n"
 			       "服务器登录(制作中)\n");
-			cin >> login_method;
+			cin >> loginMethod;
 			system("cls");
 			cout << "正在加载 当前进度：配置Java" << "\n";
 			Sleep(5000);
@@ -68,40 +69,63 @@ int main()
 			system("lancher.bat");
 			return 0;
 		}
-		else if (menu_option == "cls")
+		else if (menuOption == "cls")
 		{
 			system("cls");
 			continue;
 		}
-		else if (menu_option == "源代码")
+		else if (menuOption == "源代码")
 		{
 			system("start https://github.com/Wolffyhtl/FMCL");
 			continue;
 		}
-		else if (menu_option == "版本")
+		else if (menuOption == "版本")
 		{
 			cout << "Minecraft Lancher 0.3" << "\n";
 			cout << "powered by 一个小小小龙 copyright Dragon 2025-2030" << "\n";
 			continue;
 		}
-		else if (menu_option == "帮助")
+		else if (menuOption == "帮助")
 			menu();
-		else if (menu_option == "更新")
+		else if (menuOption == "更新")
 		{
 			cout << "检查更新中..." << "\n";
 			Sleep(2000);
 			cout << "您的版本是最新的，无需更新。";
 		}
-		else if (menu_option == "修复")
+		else if (menuOption == "修复")
 		{
 			cout << "正在下载microsoft-jdk-21.0.9-windows-x64.msi" << endl;
 			cout << "正在验证Hash值" << endl;
 			cout << "正在运行" << endl;
 			system("microsoft-jdk-2109-windows-x64.msi");
 		}
-		else if (menu_option == "清理") {
+		else if (menuOption == "清理") {
 			system("cleanTemp.bat");
 			continue;
+		}
+		else if (menuOption == "管理游戏")
+		{
+			system("cls");
+			printf("删除游戏：把游戏从您的电脑中删除\n"
+			       "内存管理：管理游戏内存使用量 当前值：4096\n"
+			       "其他功能正在制作。\n");
+			cin >> manageGame;
+			if (manageGame == "删除游戏")
+			{
+				cout << "正在启动游戏管理器" << "\n\n";
+				system("del ./.minecraft/versions");
+				continue;
+			}
+			else if (manageGame == "内存管理")
+			{
+				printf("当前内存设置量：4096\n"
+				       "请输入内存量\n");
+				cin >> memorySet;
+				Sleep(5000);
+				cout << "设置失败！" << "\n";
+				continue;
+			}
 		}
 		else
 		{
